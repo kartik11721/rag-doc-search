@@ -53,3 +53,11 @@ result = qa_instance.invoke(input="Provide your prompt here")
 print(result)
 
 ```
+
+## Examples
+
+To understand how to use the package, refer to the following examples:
+
+1. To create an API that answers your questions, use the [example provided here](./examples/qna_api_example.py).
+
+2. To create a WebSocket API for streaming answers to your questions, use the [example provided here](./examples/qna_stream_websocket_example.py).
