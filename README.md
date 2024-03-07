@@ -30,9 +30,10 @@ This package offers a lightweight and straightforward solution for implementing 
 
 ### Note
 Ensure that the necessary environment variables are set before initializing the configuration.
-If AI Provider is OPENAI then ENV OPENAI_API_KEY is required.
-If AI Provider is BEDROCK then ENV AWS_ACCESS_KEY,AWS_SECRET_ACCESS_KEY are required and AWS_REGION is optional, default is 'us-east-1'.
-If Vector Store Provider is PGVector then PGVECTOR_HOST, PGVECTOR_PORT,  PGVECTOR_DATABASE,  PGVECTOR_USER and PGVECTOR_PASSWORD are required
+
+- If AI Provider is `OPENAI` then ENV `OPENAI_API_KEY` is required.
+- If AI Provider is `BEDROCK` then ENV `AWS_ACCESS_KEY`,`AWS_SECRET_ACCESS_KEY` are required and AWS_REGION is optional, default is 'us-east-1'.
+- If Vector Store Provider is `PGVector` then `PGVECTOR_HOST`, `PGVECTOR_PORT`,  `PGVECTOR_DATABASE`,  `PGVECTOR_USER` and `PGVECTOR_PASSWORD` are required
 
 ## How to Use
 ```python
