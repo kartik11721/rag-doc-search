@@ -18,9 +18,6 @@ def config_init(config_json:dict)-> Config:
     if(config_json is None):
         raise ValueError("Config Json can not be None or Null")
     config = Config(config_json)
-    for attr, value in config.__dict__.items():
-            if not attr.startswith("_") and not callable(value):
-                print(f"{attr}: {value}")
     
     return config
 
@@ -39,10 +36,10 @@ def get_bot_instance(ai_provider : AIProvider) -> ChatBotModel:
     """
     match ai_provider:
         case AIProvider.BEDROCK:
-            from rag_doc_search_template.src.bot_models.bedrock_chatbot_model import BedrockChatBot
+            from rag_doc_search.src.bot_models.bedrock_chatbot_model import BedrockChatBot
             return BedrockChatBot()
         case AIProvider.OPENAI:
-            from rag_doc_search_template.src.bot_models.openai_chatbot_model import OpenAIChatBot
+            from rag_doc_search.src.bot_models.openai_chatbot_model import OpenAIChatBot
             return OpenAIChatBot()
         case _:
             raise ValueError("cannot initiate llm base model for given ai provider")

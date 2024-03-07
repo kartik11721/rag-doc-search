@@ -6,10 +6,10 @@ from fastapi import (
     HTTPException,
 )
 
-from rag_doc_search_template import config_init, get_bot_instance
-from rag_doc_search_template.src.models.user_prompt import UserPrompt
+from rag_doc_search import config_init, get_bot_instance
+from rag_doc_search.src.models.user_prompt import UserPrompt
 
-from rag_doc_search_template.utils.miscellaneous import get_logger
+from rag_doc_search.utils.miscellaneous import get_logger
 
 from dotenv import load_dotenv
 import os 

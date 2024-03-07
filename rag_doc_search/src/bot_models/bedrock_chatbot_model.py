@@ -7,9 +7,9 @@ from langchain.schema.language_model import BaseLanguageModel
 from langchain.chains import RetrievalQA
 from langchain.chains import ConversationalRetrievalChain
 
-from rag_doc_search_template.src.bot_models.chatbot_model import ChatBotModel
-from rag_doc_search_template import config
-from rag_doc_search_template.utils.callback import StreamingLLMCallbackHandler
+from rag_doc_search.src.bot_models.chatbot_model import ChatBotModel
+from rag_doc_search import config
+from rag_doc_search.utils.callback import StreamingLLMCallbackHandler
 
 
 class BedrockChatBot(ChatBotModel):

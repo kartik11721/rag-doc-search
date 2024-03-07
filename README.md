@@ -36,9 +36,9 @@ If Vector Store Provider is PGVector then PGVECTOR_HOST, PGVECTOR_PORT,  PGVECTO
 
 ## How to Use
 ```python
-from rag_doc_search_template import config_init, get_bot_instance
-from rag_doc_search_template.utils.config import Config
-from rag_doc_search_template.src.enums.provider import AIProvider
+from rag_doc_search import config_init, get_bot_instance
+from rag_doc_search.utils.config import Config
+from rag_doc_search.src.enums.provider import AIProvider
 
 # provide your config JSON in init config_init method below also set the required ENV as mentioned in Note
 config = config_init({})

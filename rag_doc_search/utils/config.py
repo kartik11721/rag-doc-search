@@ -4,9 +4,9 @@ from langchain.vectorstores.pgvector import PGVector
 from langchain.vectorstores.faiss import FAISS
 from langchain.schema.vectorstore import VectorStore
 
-from rag_doc_search_template.src.enums.provider import AIProvider, VectorStoreProvider
-from rag_doc_search_template.src.enums.search_type import RetrieverSearchType
-from rag_doc_search_template.utils.miscellaneous import get_logger
+from rag_doc_search.src.enums.provider import AIProvider, VectorStoreProvider
+from rag_doc_search.src.enums.search_type import RetrieverSearchType
+from rag_doc_search.utils.miscellaneous import get_logger
 
 
 class Config:

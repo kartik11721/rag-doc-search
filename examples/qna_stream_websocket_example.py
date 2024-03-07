@@ -7,11 +7,11 @@ from fastapi import (
 )
 from websockets.exceptions import ConnectionClosedOK
 
-from rag_doc_search_template import config_init, get_bot_instance
-from rag_doc_search_template.src.models.chat_response import ChatResponse
+from rag_doc_search import config_init, get_bot_instance
+from rag_doc_search.src.models.chat_response import ChatResponse
 
-from rag_doc_search_template.utils.miscellaneous import get_logger
-from rag_doc_search_template.utils.callback import StreamingLLMCallbackHandler
+from rag_doc_search.utils.miscellaneous import get_logger
+from rag_doc_search.utils.callback import StreamingLLMCallbackHandler
 
 from dotenv import load_dotenv
 import os 

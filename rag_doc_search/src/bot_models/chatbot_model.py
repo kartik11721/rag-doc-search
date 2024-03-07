@@ -8,12 +8,12 @@ from langchain.schema.embeddings import Embeddings
 from langchain.chains import RetrievalQA
 from langchain.schema.language_model import BaseLanguageModel
 
-from rag_doc_search_template.src.prompt_templates.default_prompt_templates import (
+from rag_doc_search.src.prompt_templates.default_prompt_templates import (
     DEFAULT_PROMPT_TEMPLATE,
     DEFAULT_CHAT_HISTORY_PROMPT,
 )
-from rag_doc_search_template.utils.miscellaneous import get_chat_history
-from rag_doc_search_template.utils.miscellaneous import get_logger
+from rag_doc_search.utils.miscellaneous import get_chat_history
+from rag_doc_search.utils.miscellaneous import get_logger
 
 
 class ChatBotModel:
