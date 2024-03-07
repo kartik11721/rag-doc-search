@@ -1,4 +1,4 @@
-# RAG doc search template
+# RAG doc search
 
 ## Overview
 This package offers a lightweight and straightforward solution for implementing Retrieval-augmented generation (RAG) functionality with large language models (LLMs). RAG enhances prediction quality by incorporating external data storage during inference, enabling the construction of more contextually rich prompts. Leveraging combinations of context, history, and up-to-date knowledge, RAG LLMs empower users to generate more accurate and relevant responses. This package streamlines the integration of RAG capabilities into applications, facilitating the creation of more intelligent and context-aware conversational agents, search engines, and text generation systems.
