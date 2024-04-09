@@ -20,7 +20,7 @@ class AzureChatBot(ChatBotModel):
 
     def __init__(self):
         self.config = config
-        self.embeddings = AzureOpenAIEmbeddings(azure_deployment=self.config.embeddings_model,api_version=os.environ.get("OPENAI_API_VERSION"))
+        self.embeddings = AzureOpenAIEmbeddings(azure_deployment=self.config.embeddings_model,api_version=os.environ.get("AZURE_OPENAI_API_VERSION"))
         self.vector_store = self.config.get_vector_store(embeddings=self.embeddings)
         super().__init__(
             embeddings=self.embeddings,
@@ -41,7 +41,7 @@ class AzureChatBot(ChatBotModel):
             temperature=self.config.llm_temperature,
             max_tokens=self.config.llm_max_output_tokens,
             openai_api_key=os.environ.get("AZURE_OPENAI_API_KEY"),
-            openai_api_version=os.environ.get("OPENAI_API_VERSION")
+            openai_api_version=os.environ.get("AZURE_OPENAI_API_VERSION")
         )
         qa = self.create_qa_chain(cl_llm)
         return qa

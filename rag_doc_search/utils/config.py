@@ -254,6 +254,7 @@ class Config:
                         folder_path=self.faiss_vector_embeddings_location,
                         embeddings=embeddings,
                         index_name=self.faiss_index_name,
+                        allow_dangerous_deserialization=True,
                     )
 
                 case VectorStoreProvider.PGVector:

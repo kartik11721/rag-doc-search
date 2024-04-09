@@ -1,5 +1,5 @@
-from langchain_community.embeddings.openai import OpenAIEmbeddings
-from langchain.llms.openai import OpenAI
+from langchain_openai import OpenAIEmbeddings
+from langchain_openai import ChatOpenAI
 from langchain.schema.language_model import BaseLanguageModel
 from langchain.chains import RetrievalQA
 from langchain.chains import ConversationalRetrievalChain
@@ -32,7 +32,7 @@ class OpenAIChatBot(ChatBotModel):
         Returns:
         An instance of RetrivalQA.
         """
-        cl_llm: BaseLanguageModel = OpenAI(
+        cl_llm: BaseLanguageModel = ChatOpenAI(
             model_name=self.config.llm,
             temperature=self.config.llm_temperature,
             max_tokens=self.config.llm_max_output_tokens,
@@ -54,7 +54,7 @@ class OpenAIChatBot(ChatBotModel):
         An instance of ConversationalRetrievalChain for conversational question-answering.
         """
         stream_manager = self.create_stream_manager(stream_handler, tracing)
-        cl_llm: BaseLanguageModel = OpenAI(
+        cl_llm: BaseLanguageModel = ChatOpenAI(
             model_name=self.config.llm,
             temperature=self.config.llm_temperature,
             max_tokens=self.config.llm_max_output_tokens,
